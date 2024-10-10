@@ -605,7 +605,7 @@ const BlogPost = {
 </my-component> <!-- 但浏览器会在这里关闭标签 -->
 ```
 
-### 元素位置限制 {#element-placement-restrictions}
+### ★元素位置限制 {#element-placement-restrictions}
 
 某些 HTML 元素对于放在其中的元素类型有限制，例如 `<ul>`，`<ol>`，`<table>` 和 `<select>`，相应的，某些元素仅在放置于特定元素中时才会显示，例如 `<li>`，`<tr>` 和 `<option>`。
 
