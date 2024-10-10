@@ -118,7 +118,7 @@ items.forEach((item, index) => {
 </li>
 ```
 
-你也可以使用 `of` 作为分隔符来替代 `in`，这更接近 JavaScript 的迭代器语法：
+★你也可以使用 `of` 作为分隔符来替代 `in`，这更接近 JavaScript 的迭代器语法：
 
 ```vue-html
 <div v-for="item of items"></div>
@@ -198,7 +198,7 @@ data() {
 <span v-for="n in 10">{{ n }}</span>
 ```
 
-注意此处 `n` 的初值是从 `1` 开始而非 `0`。
+★注意此处 `n` 的初值是从 `1` 开始而非 `0`。
 
 ## `<template>` 上的 `v-for` {#v-for-on-template}
 
@@ -241,7 +241,7 @@ data() {
 </template>
 ```
 
-## 通过 key 管理状态 {#maintaining-state-with-key}
+## ★通过 key 管理状态 {#maintaining-state-with-key}
 
 Vue 默认按照“就地更新”的策略来更新通过 `v-for` 渲染的元素列表。当数据项的顺序改变时，Vue 不会随之移动 DOM 元素的顺序，而是就地更新每个元素，确保它们在原本指定的索引位置上渲染。
 
@@ -339,7 +339,7 @@ this.items = this.items.filter((item) => item.message.match(/Foo/))
 
 </div>
 
-你可能认为这将导致 Vue 丢弃现有的 DOM 并重新渲染整个列表——幸运的是，情况并非如此。Vue 实现了一些巧妙的方法来最大化对 DOM 元素的重用，因此用另一个包含部分重叠对象的数组来做替换，仍会是一种非常高效的操作。
+★你可能认为这将导致 Vue 丢弃现有的 DOM 并重新渲染整个列表——幸运的是，情况并非如此。Vue 实现了一些巧妙的方法来最大化对 DOM 元素的重用，因此用另一个包含部分重叠对象的数组来做替换，仍会是一种非常高效的操作。
 
 ## 展示过滤或排序后的结果 {#displaying-filtered-sorted-results}
 
@@ -418,7 +418,7 @@ methods: {
 </ul>
 ```
 
-在计算属性中使用 `reverse()` 和 `sort()` 的时候务必小心！这两个方法将变更原始数组，计算函数中不应该这么做。请在调用这些方法之前创建一个原数组的副本：
+★在计算属性中使用 `reverse()` 和 `sort()` 的时候务必小心！这两个方法将变更原始数组，计算函数中不应该这么做。请在调用这些方法之前创建一个原数组的副本：
 
 ```diff
 - return numbers.reverse()
