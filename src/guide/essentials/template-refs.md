@@ -113,7 +113,7 @@ watchEffect(() => {
 
 </div>
 
-## `v-for` 中的模板引用 {#refs-inside-v-for}
+## ★`v-for` 中的模板引用 {#refs-inside-v-for}
 
 > 需要 v3.2.25 及以上版本
 
@@ -208,7 +208,7 @@ export default {
 
 应该注意的是，ref 数组**并不**保证与源数组相同的顺序。
 
-## 函数模板引用 {#function-refs}
+## ★函数模板引用 {#function-refs}
 
 除了使用字符串值作名字，`ref` attribute 还可以绑定为一个函数，会在每次组件更新时都被调用。该函数会收到元素引用作为其第一个参数：
 
@@ -218,7 +218,7 @@ export default {
 
 注意我们这里需要使用动态的 `:ref` 绑定才能够传入一个函数。当绑定的元素被卸载时，函数也会被调用一次，此时的 `el` 参数会是 `null`。你当然也可以绑定一个组件方法而不是内联函数。
 
-## 组件上的 ref {#ref-on-component}
+## ★组件上的 ref {#ref-on-component}
 
 > 这一小节假设你已了解[组件](/guide/essentials/component-basics)的相关知识，或者你也可以先跳过这里，之后再回来看。
 
@@ -310,7 +310,7 @@ defineExpose({
 </script>
 ```
 
-当父组件通过模板引用获取到了该组件的实例时，得到的实例类型为 `{ a: number, b: number }` (ref 都会自动解包，和一般的实例一样)。
+当父组件通过模板引用获取到了该组件的实例时，得到的实例类型为 `{ a: number, b: number }` (★ref 都会自动解包，和一般的实例一样)。
 
 TypeScript 用户请参考：[为组件的模板引用标注类型](/guide/typescript/composition-api#typing-component-template-refs) <sup class="vt-badge ts" />
 
