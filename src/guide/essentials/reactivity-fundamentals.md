@@ -408,7 +408,7 @@ console.log(proxy === raw) // false
 
 只有代理对象是响应式的，更改原始对象不会触发更新。因此，使用 Vue 的响应式系统的最佳实践是**仅使用你声明对象的代理版本**。
 
-为保证访问代理的一致性，对同一个原始对象调用 `reactive()` 会总是返回同样的代理对象，而对一个已存在的代理对象调用 `reactive()` 会返回其本身：
+★为保证访问代理的一致性，对同一个原始对象调用 `reactive()` 会总是返回同样的代理对象，而对一个已存在的代理对象调用 `reactive()` 会返回其本身：
 
 ```js
 // 在同一个对象上调用 reactive() 会返回相同的代理
@@ -429,7 +429,7 @@ proxy.nested = raw
 console.log(proxy.nested === raw) // false
 ```
 
-### `reactive()` 的局限性 \*\* {#limitations-of-reactive}
+### ★`reactive()` 的局限性 \*\* {#limitations-of-reactive}
 
 `reactive()` API 有一些局限性：
 
@@ -463,7 +463,7 @@ console.log(proxy.nested === raw) // false
 
 由于这些限制，我们建议使用 `ref()` 作为声明响应式状态的主要 API。
 
-## 额外的 ref 解包细节 \*\* {#additional-ref-unwrapping-details}
+## ★额外的 ref 解包细节 \*\* {#additional-ref-unwrapping-details}
 
 ### 作为 reactive 对象的属性 \*\* {#ref-unwrapping-as-reactive-object-property}
 
