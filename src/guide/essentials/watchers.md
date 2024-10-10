@@ -184,7 +184,7 @@ export default {
 
 <div class="composition-api">
 
-直接给 `watch()` 传入一个响应式对象，会隐式地创建一个深层侦听器——该回调函数在所有嵌套的变更时都会被触发：
+★直接给 `watch()` 传入一个响应式对象，会隐式地创建一个深层侦听器——该回调函数在所有嵌套的变更时都会被触发：
 
 ```js
 const obj = reactive({ count: 0 })
@@ -224,7 +224,7 @@ watch(
 
 </div>
 
-在 Vue 3.5+ 中，`deep` 选项还可以是一个数字，表示最大遍历深度——即 Vue 应该遍历对象嵌套属性的级数。
+★在 Vue 3.5+ 中，`deep` 选项还可以是一个数字，表示最大遍历深度——即 Vue 应该遍历对象嵌套属性的级数。
 
 :::warning 谨慎使用
 深度侦听需要遍历被侦听对象中的所有嵌套的属性，当用于大型数据结构时，开销很大。因此请只在必要时才使用它，并且要留意性能。
@@ -346,14 +346,14 @@ watchEffect(async () => {
 })
 ```
 
-这个例子中，回调会立即执行，不需要指定 `immediate: true`。在执行期间，它会自动追踪 `todoId.value` 作为依赖（和计算属性类似）。每当 `todoId.value` 变化时，回调会再次执行。有了 `watchEffect()`，我们不再需要明确传递 `todoId` 作为源值。
+★这个例子中，回调会立即执行，不需要指定 `immediate: true`。在执行期间，它会自动追踪 `todoId.value` 作为依赖（和计算属性类似）。每当 `todoId.value` 变化时，回调会再次执行。有了 `watchEffect()`，我们不再需要明确传递 `todoId` 作为源值。
 
 你可以参考一下[这个例子](/examples/#fetching-data)的 `watchEffect` 和响应式的数据请求的操作。
 
 对于这种只有一个依赖项的例子来说，`watchEffect()` 的好处相对较小。但是对于有多个依赖项的侦听器来说，使用 `watchEffect()` 可以消除手动维护依赖列表的负担。此外，如果你需要侦听一个嵌套数据结构中的几个属性，`watchEffect()` 可能会比深度侦听器更有效，因为它将只跟踪回调中被使用到的属性，而不是递归地跟踪所有的属性。
 
 :::tip
-`watchEffect` 仅会在其**同步**执行期间，才追踪依赖。在使用异步回调时，只有在第一个 `await` 正常工作前访问到的属性才会被追踪。
+★`watchEffect` 仅会在其**同步**执行期间，才追踪依赖。在使用异步回调时，只有在第一个 `await` 正常工作前访问到的属性才会被追踪。
 :::
 
 ### `watch` vs. `watchEffect` {#watch-vs-watcheffect}
@@ -366,7 +366,7 @@ watchEffect(async () => {
 
 </div>
 
-## 副作用清理 {#side-effect-cleanup}
+## ★副作用清理 {#side-effect-cleanup}
 
 有时我们可能会在侦听器中执行副作用，例如异步请求：
 
@@ -488,7 +488,7 @@ export default {
 
 这在 3.5 之前的版本有效。此外，通过函数参数传递的 `onCleanup` 与侦听器实例相绑定，因此不受 `onWatcherCleanup` 的同步限制。
 
-## 回调的触发时机 {#callback-flush-timing}
+## ★回调的触发时机 {#callback-flush-timing}
 
 当你更改了响应式状态，它可能会同时触发 Vue 组件更新和侦听器回调。
 
@@ -608,7 +608,7 @@ export default {
 
 </div>
 
-## 停止侦听器 {#stopping-a-watcher}
+## ★停止侦听器 {#stopping-a-watcher}
 
 <div class="options-api">
 
