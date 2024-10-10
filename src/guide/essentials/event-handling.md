@@ -168,7 +168,7 @@ methods: {
 
 ## 在内联事件处理器中访问事件参数 {#accessing-event-argument-in-inline-handlers}
 
-有时我们需要在内联事件处理器中访问原生 DOM 事件。你可以向该处理器方法传入一个特殊的 `$event` 变量，或者使用内联箭头函数：
+有时我们需要在内联事件处理器中访问原生 DOM 事件。★你可以向该处理器方法传入一个特殊的 `$event` 变量，或者使用内联箭头函数：
 
 ```vue-html
 <!-- 使用特殊的 $event 变量 -->
@@ -276,7 +276,7 @@ methods: {
 <input @keyup.enter="submit" />
 ```
 
-你可以直接使用 [`KeyboardEvent.key`](https://developer.mozilla.org/zh-CN/docs/Web/API/KeyboardEvent/key/Key_Values) 暴露的按键名称作为修饰符，但需要转为 kebab-case 形式。
+★你可以直接使用 [`KeyboardEvent.key`](https://developer.mozilla.org/zh-CN/docs/Web/API/KeyboardEvent/key/Key_Values) 暴露的按键名称作为修饰符，但需要转为 kebab-case 形式。
 
 ```vue-html
 <input @keyup.page-down="onPageDown" />

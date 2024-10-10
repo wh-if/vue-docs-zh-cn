@@ -129,7 +129,7 @@ const multiSelected = ref([])
 
 </div>
 
-我们也可以将多个复选框绑定到同一个数组或[集合](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set)的值：
+★我们也可以将多个复选框绑定到同一个数组或[集合](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set)的值：
 
 <div class="composition-api">
 
@@ -371,7 +371,7 @@ export default {
 
 但有时我们可能希望将该值绑定到当前组件实例上的动态数据。这可以通过使用 `v-bind` 来实现。此外，使用 `v-bind` 还使我们可以将选项值绑定为非字符串的数据类型。
 
-### 复选框 {#checkbox-1}
+### ★复选框 {#checkbox-1}
 
 ```vue-html
 <input
@@ -404,7 +404,7 @@ export default {
 
 `pick` 会在第一个按钮选中时被设为 `first`，在第二个按钮选中时被设为 `second`。
 
-### 选择器选项 {#select-options-2}
+### ★选择器选项 {#select-options-2}
 
 ```vue-html
 <select v-model="selected">
